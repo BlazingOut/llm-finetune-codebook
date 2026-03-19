@@ -246,3 +246,21 @@ pip install <具体库的名称>
 // 或者
 conda install <具体库的名称>
 ```
+
+
+# 五、可能发生的报错
+
+## 1. 创建环境失败
+
+> Connection broken: IncompleteRead(7923862 bytes read, 1382997 more expected)
+
+此问题通常由网络波动或默认 conda 频道（服务器在国外）连接速度慢引起。可以尝试以下方法解决：
+1. **直接重试**：有时网络问题只是暂时的。直接在终端中**重新运行一次完全相同的创建命令**即可。
+2. **配置国内镜像源（推荐）**：为 conda 配置国内的镜像服务器（如清华、中科大镜像），可以极大提升下载速度和稳定性。配置后，再进行环境创建。
+- 以配置清华镜像为例，执行以下命令：
+```bash
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --set show_channel_urls yes
+```
+
