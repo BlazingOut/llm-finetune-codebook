@@ -17,17 +17,17 @@
 1. 打开 VS Code，点击左侧工具栏的 **扩展 (Extensions)** 图标。
 2. 在搜索框输入 `Python`，选择由 **Microsoft** 发布的插件并点击 **Install**。
 
-![[tutorials/1 环境配置与模型初探/img/vscode_python_extension.png]]
+![](tutorials/1_环境配置/img/vscode_python_extension.png)
 
 ### 2. 选择 Python 解释器
- ![[tutorials/1 环境配置与模型初探/img/vscode_environment_setting.png]]
+![](tutorials/1_环境配置/img/vscode_environment_setting.png)
+
 安装插件后，你可以通过以下方式为你的项目指定环境：
 
 1. **新建文件**：随便创建一个以 `.py` 为后缀的文件（例如 `test.py`）。
 2. **点击右下角**：观察 VS Code 窗口右下角的状态栏，点击显示 Python 版本的地方（例如 `Select Interpreter` 或 `Python 3.x.x`）。
-    
 
-![[tutorials/1 环境配置与模型初探/img/vscode_add_python_env.png]]
+![](tutorials/1_环境配置/img/vscode_add_python_env.png)
 
 3. **弹出列表**：页面上方会弹出环境列表。如果你能看到刚才创建的虚拟环境（如 `llm-finetune`），直接点击选择即可。
 
@@ -42,7 +42,7 @@
     - 找到你创建的环境名称文件夹（例如 `llm-finetune`）。
     - **关键步骤**：点进去找到 **`python.exe`** 文件，点击 **"Select Interpreter"**。
 
-![[tutorials/1 环境配置与模型初探/img/how_to_find_conda_environment.png]]
+![](tutorials/1_环境配置/img/how_to_find_conda_environment.png)
 
 ---
 
@@ -57,10 +57,8 @@
 ### 1. 如何打开内置终端？
 
 - **方案一：** 在 VS Code 顶部菜单栏找到 **终端 (Terminal)** -> **新建终端 (New Terminal)**。
-    
 - **方案二（快捷键）：** 按下 `Ctrl + Shift + ~`。
-    
-![[tutorials/1 环境配置与模型初探/img/vscode_terminal.png]]
+![](tutorials/1_环境配置/img/vscode_terminal.png)
 
 ---
 
@@ -70,7 +68,7 @@
 2. **搜索配置项**：在搜索框输入 `automation profile`。
 3. **编辑 JSON**：找到 `Terminal > Integrated > Profiles: Windows`（Mac/Linux 用户选择对应系统项），点击下方蓝色的 **Edit in settings.json**。
 
-![[tutorials/1 环境配置与模型初探/img/vscode_terminal_settings.png]]
+![](tutorials/1_环境配置/img/vscode_terminal_settings.png)
 
 ---
 
@@ -111,7 +109,7 @@
 2. **查看标识**：观察终端最左侧。如果出现了 **`(base)`** 或者是你当前激活的环境名，说明配置成功！
 3. **手动切换**：如果你想临时换回普通 CMD，可以点击终端面板右上角的 **“+”** 号旁边的下拉箭头，手动选择 `Conda-Prompt` 或其他终端。
 
-![[tutorials/1 环境配置与模型初探/img/vscode_terminal_check.png]]
+![](tutorials/1_环境配置/img/vscode_terminal_check.png)
 
 ---
 
@@ -134,13 +132,13 @@
 
 在 VS Code 左侧工具栏点击 **扩展 (Extensions)** 图标（四个方块形状），搜索 `Remote - SSH`，点击 **Install** 安装。
 
-![[tutorials/1 环境配置与模型初探/img/vscode_remote_ssh_extension.png]]
+![](tutorials/1_环境配置/img/vscode_remote_ssh_extension.png)
 
 安装完成后，左侧状态栏会多出一个**远程资源管理器**图标（看起来像一个小电脑或两个尖括号 `><`）。
 
 #### 第二步：添加远程连接
 
-![[tutorials/1 环境配置与模型初探/img/vscode_remote_ssh_link.png]]
+![](tutorials/1_环境配置/img/vscode_remote_ssh_link.png)
 
 1. 点击左侧的**远程资源管理器**图标。
 2. 点击窗口中 **SSH** 栏目旁的 **“+” (Add New)** 按钮。

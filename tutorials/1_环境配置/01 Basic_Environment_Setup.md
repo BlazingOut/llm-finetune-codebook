@@ -87,16 +87,6 @@ VS Code 的安装非常简单，一路点击“下一步”即可：
 - **下载地址**：[VS Code 官网](https://code.visualstudio.com/)
 - **详细配置参考**：[从零开始：VSCode的详细安装与配置教程 - 知乎](https://zhuanlan.zhihu.com/p/698865320)
 
----
-
-## 💡 模块预告
-
-现在你已经安装好了“仓库”和“舞台”，但它们目前还是互相独立的。
-
-- 在下一节 **【三、走进命令行世界】** 中，我们将学习如何操作这个仓库。
-    
-- 在下一章 **【02 VSCode_Advanced_Config】** 中，我们将学习如何将 VS Code 与 Miniconda “连接”起来，实现一键运行。
-
 # 三、走进命令行世界
 
 对于初学者来说，“终端”和“命令行”就像是计算机的“后台入口”。虽然我们习惯了用鼠标点点点（图形界面），但在深度学习和服务器操作中，键盘输入才是最高效的沟通方式。
@@ -170,12 +160,12 @@ Anaconda 自带的终端（通常称为 **Anaconda Prompt**​ 或 **Anaconda Te
 
 在 Windows 中，标准的 `CMD` 或 `PowerShell` 默认是不认识 `conda` 命令的（除非你手动配置了复杂的环境变量）。
 安装完 Miniconda 后，你的电脑上会多出几个蓝色的图标。
-![[tutorials/1 环境配置与模型初探/img/conda_prompt_.png]]
+![](tutorials/1_环境配置/img/conda_prompt_.png)
 - **正确操作**：点击 Windows “开始”菜单，搜索并打开 **"Anaconda Prompt (miniconda3)"**。
 - **特征**：打开后，你会发现每行文字的最左边有一个括号，写着 `(base)`。这代表你已经成功进入了 Conda 的管理世界。
 
 ### 4.2 Linux / Mac 用户：直接使用系统 Terminal
-![[tutorials/1 环境配置与模型初探/img/how_to_find_linux_terminal.png]]
+![](tutorials/1_环境配置/img/how_to_find_linux_terminal.png)
 在 Linux 或 Mac 上，Miniconda 在安装时通常会自动激活。你只需要打开系统自带的 **Terminal (终端)** 即可。
 
 - 如果左侧没有出现 `(base)`，可以输入 `source ~/.bashrc` 来刷新一下。
@@ -224,7 +214,7 @@ Anaconda 自带的终端（通常称为 **Anaconda Prompt**​ 或 **Anaconda Te
 在实际开发流程中，我们遵循以下规范：
 
 1. **打开终端**：默认进入 `(base)` 环境。
-![[tutorials/1 环境配置与模型初探/img/conda_base.png]]
+![](tutorials/1_环境配置/img/conda_base.png)
 
 2. **创建新环境**：针对新项目（如微调大模型）创建一个专属环境。
 
@@ -238,7 +228,7 @@ Anaconda 自带的终端（通常称为 **Anaconda Prompt**​ 或 **Anaconda Te
 ```bash
     conda activate llm-finetune
 ```
-  ![[tutorials/1 环境配置与模型初探/img/terminal_activate_env.png]]
+![](tutorials/1_环境配置/img/terminal_activate_env.png)
 4. **安装依赖**：在当前激活的环境下安装 `torch` 等工具。此时这些库只存在于 `llm-finetune` 文件夹下。
 
 ```bash

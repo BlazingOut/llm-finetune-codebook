@@ -19,9 +19,9 @@ Hugging Face作为当前最流行的AI模型社区，汇集了数十万个预训
 3. **勾选：** 在功能列表中找到 **“HuggingFace”** 并勾选。
 4. **生效：** 点击“保存设置”，回到主界面点击 **“启动服务”**。
 
-![[tutorials/1 环境配置与模型初探/img/steamcommunity302_start.png]]
+![](tutorials/1_环境配置/img/steamcommunity302_start.png)
 
-![[tutorials/1 环境配置与模型初探/img/steamcommunity302_settings.png]]
+![](tutorials/1_环境配置/img/steamcommunity302_settings.png)
 
 ---
 
@@ -37,7 +37,7 @@ Hugging Face作为当前最流行的AI模型社区，汇集了数十万个预训
 
 > **微调指南：** 在本项目中，我们主要打交道的是 **Models**（获取底座）和 **Datasets**（准备材料）。
 
-![[tutorials/1 环境配置与模型初探/img/huggingface_first_page.png]]
+![](tutorials/1_环境配置/img/huggingface_first_page.png)
 
 ---
 
@@ -45,7 +45,7 @@ Hugging Face作为当前最流行的AI模型社区，汇集了数十万个预训
 
 在搜索框中输入我们要使用的模型 ID。例如，本次教程推荐的入门级模型：`Qwen/Qwen2.5-1.5B-Instruct`。
 
-![[tutorials/1 环境配置与模型初探/img/qwen2.5_model_page.png]]
+![](tutorials/1_环境配置/img/qwen2.5_model_page.png)
 
 #### 🔍 模型命名深度解析
 
@@ -85,7 +85,7 @@ Hugging Face作为当前最流行的AI模型社区，汇集了数十万个预训
 - **`*.safetensors` 或 `pytorch_model.bin`**：模型的核心权重文件。
 - **`tokenizer.json` / `vocab.json`**：分词器配置与词表，负责将文字转为数字。
 
-![[tutorials/1 环境配置与模型初探/img/qwen2.5_file_download_page.png]]
+![](tutorials/1_环境配置/img/qwen2.5_file_download_page.png)
 
 ---
 
@@ -286,7 +286,7 @@ snapshot_download(
 - **登录：** 访问模型主页（例如 [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)）。
 - **状态确认：** 如果看到需要登录的提示，请先完成登录。
 
-![[tutorials/1 环境配置与模型初探/img/limited_access_model.png]]
+![](tutorials/1_环境配置/img/limited_access_model.png)
 
 ### 步骤 2：提交模型使用申请 (Gated Models)
 
@@ -299,7 +299,7 @@ snapshot_download(
 
 > **注意：** 审批时间从几分钟到几天不等。审批通过后，你会收到一封确认邮件，模型页面也会显示“你已获得访问权限”。
 
-![[tutorials/1 环境配置与模型初探/img/limited_access_success_model.png]]
+![](tutorials/1_环境配置/img/limited_access_success_model.png)
 
 ---
 
@@ -310,12 +310,11 @@ snapshot_download(
 1. **进入设置：** 点击网页右上角的个人头像，选择 **Settings**，新的版本**Settings**的下面可以直接找到 **Access Tokens**。
 2. **访问令牌选项：** 在左侧边栏找到 **Access Tokens**。
 
-![[tutorials/1 环境配置与模型初探/img/access_tokens_page.png]]
+![](tutorials/1_环境配置/img/access_tokens_page.png)
 
 3. **新建 Token：** 点击 **Create new token**。
-    
 
-![[tutorials/1 环境配置与模型初探/img/add_access_token.png]]
+![](tutorials/1_环境配置/img/add_access_token.png)
 
 #### 配置建议：
 

@@ -65,7 +65,7 @@ $$\text{Scalar} \rightarrow \text{Vector} \rightarrow \text{Matrix} \rightarrow 
 
 安装 PyTorch **绝对不能**盲目输入命令，必须去官网获取属于你电脑的“专属指令”。
 #### 第一步：检查你的 CUDA 版本
-![[tutorials/1 环境配置与模型初探/img/nvidia-smi.png]]
+![](tutorials/1_环境配置/img/nvidia-smi.png)
 在安装之前，你需要知道你的显卡驱动支持到哪个版本的 CUDA。
 1. 打开终端（Anaconda Prompt）。
 2. 输入命令：`nvidia-smi`。
@@ -75,7 +75,7 @@ $$\text{Scalar} \rightarrow \text{Vector} \rightarrow \text{Matrix} \rightarrow 
 
 前往 [PyTorch.org](https://pytorch.org/)首页往下划动，你会看到一个配置矩阵：
 
-![[tutorials/1 环境配置与模型初探/img/Pytorch_run_command.png]]
+![](tutorials/1_环境配置/img/Pytorch_run_command.png)
 
 | **配置项**              | **选择建议**                                                |
 | -------------------- | ------------------------------------------------------- |
@@ -87,7 +87,7 @@ $$\text{Scalar} \rightarrow \text{Vector} \rightarrow \text{Matrix} \rightarrow 
 
 这里只显示最近的几个CUDA版本，如果你的CUDA版本低于这些，可以点击左下角的`Previous versions of Pytorch`下载以前的版本。[Previous PyTorch Versions](https://pytorch.org/get-started/previous-versions/)
 
-![[tutorials/1 环境配置与模型初探/img/previous_cuda_command.png]]
+![](tutorials/1_环境配置/img/previous_cuda_command.png)
 搜索一下，找到自己对应的CUDA 版本。复制下面的命令。
 现在我们得到了正确的下载指令，如
 ```bash
@@ -103,8 +103,8 @@ pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https
 conda activate llm-finetune
 pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
 ```
-![[tutorials/1 环境配置与模型初探/img/pytorch_install.png]]
 
+![](tutorials/1_环境配置/img/pytorch_install.png)
 #### 验证安装成功
 
 ```bash
