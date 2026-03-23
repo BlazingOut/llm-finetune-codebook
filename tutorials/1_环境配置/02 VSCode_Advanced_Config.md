@@ -184,3 +184,58 @@
 1. **本地生成**：在本地终端输入 `ssh-keygen -t rsa`。
 2. **上传公钥**：将 `id_rsa.pub` 的内容复制到服务器的 `~/.ssh/authorized_keys` 文件中。
     _这样，下次连接时 VS Code 就会自动完成身份验证，体验极其丝滑。_
+
+
+## 四、Jupyter notebook
+
+
+首先介绍一下Jupyter notebook的特点，以及它对于教学的重要性。
+然后进入配置阶段
+
+### 1. 如何配置Jupyter notebook 的环境
+
+#### 第一步：在base环境中安装jupyter notebook插件
+在base环境安装jupyter notebook就可以了，并且只需要安装这一次
+
+```
+#(base)
+pip install jupyter notebook
+```
+其他的环境只需要进行下面的环境配置操作
+#### 第二步：激活虚拟环境
+```bash
+conda create -n my_env python=3.10
+conda activate my_env
+```
+
+#### 第三步：安装ipykernel
+在虚拟环境中安装`ipykernel`包，这是连接Jupyter的关键组件：
+```bash
+conda install ipykernel -y
+```
+
+#### 第四步：将环境注册到Jupyter内核
+将当前虚拟环境添加到Jupyter的内核列表，并设置显示名称（如`My_Project`）：
+```bash
+python -m ipykernel install --user --name=my_env --display-name="My_Project"
+```
+参数说明：
+- `--name`：内核标识（需与环境名一致）。
+- `--display-name`：Jupyter界面中显示的名称，可自定义
+#### 验证配置
+
+启动Jupyter Notebook：
+```bash
+# 在任意的环境中都可以，输入
+jupyter notebook
+```
+
+在Notebook界面点击右上角`Kernel → Change Kernel`，选择刚注册的`My_Project`即可使用该环境
+
+### 2. 在vscode中使用jupyter notebook
+
+- 安装jupyter 插件
+在扩展中搜索`jupyter`, 只用安装只一个，其它的jupyter....会作为扩展一起安装。
+
+- 现在打开任意以`.ipynp`后缀的文件，都会自动进入notebook的界面
+- 右上角可以看到并选择我们在之前注册为内核的环境们

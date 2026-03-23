@@ -275,10 +275,10 @@ snapshot_download(
     
 - **Local Dir (本地目录)**：使用 `snapshot_download` 并指定 `local_dir`，文件会以你在网页上看到的原始结构（如 `config.json`）整齐排列。**在本项目后续的微调流程中，我们建议统一使用 Local Dir 模式。**
 
-在 Hugging Face (HF) 上，并不是所有的模型都可以直接匿名下载。像 Meta 的 **Llama 3.1** 或 Google 的 **Gemma** 等模型，通常属于“受限访问”资源。
-
 
 # 三、访问受限模型
+
+在 Hugging Face (HF) 上，并不是所有的模型都可以直接匿名下载。像 Meta 的 **Llama 3.1** 或 Google 的 **Gemma** 等模型，通常属于“受限访问”资源。
 ### 步骤 1：注册与登录
 
 在开始之前，请确保你已经拥有一个 [Hugging Face](https://huggingface.co/join) 账号。

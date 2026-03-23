@@ -28,9 +28,7 @@ $$\text{Scalar} \rightarrow \text{Vector} \rightarrow \text{Matrix} \rightarrow 
 
 大模型的本质就是**极大规模的数学运算**。
 
-当你对模型说一句话时，这句话会被转化成一串数字（张量），然后与模型内部数以亿计的权重（也是张量）进行相乘和相加。PyTorch 的核心任务就是高效地完成这些**张量积（Tensor Multiplication）**运算。
-
----
+当你对模型说一句话时，这句话会被转化成一串数字（张量），然后与模型内部数以亿计的权重（也是张量）进行相乘和相加。PyTorch 的核心任务就是高效地完成这些**张量积（Tensor Multiplication）运算**。
 
 ## 3. GPU 与 CUDA：加速的秘诀
 
