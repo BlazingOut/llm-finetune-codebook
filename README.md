@@ -1,41 +1,40 @@
-# 🧠 动手学大模型微调：从零开始的实践指南
+# 🤖 动手学大模型微调：从零开始的实践指南
 
-> 一个为有Python基础、但**无深度学习背景**的计算机或相关专业的本科或研究生设计的开源教程，专注于在**消费级显卡**上，以最清晰、可复现的步骤，完成开源小模型的完整微调与部署流程。🚀
+> 一个为有Python基础、但**无深度学习背景**的初学者设计的开源教程，专注于在**消费级显卡**上，以最清晰、可复现的步骤，完成开源小模型的完整微调与部署流程。🚀
 
-## 📖 目录
-
-- [✨ 项目背景](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF)
-- [🎯 教学目标](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E6%95%99%E5%AD%A6%E7%9B%AE%E6%A0%87)
-- [🚀 快速开始](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
-- [📚 课程大纲](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E8%AF%BE%E7%A8%8B%E5%A4%A7%E7%BA%B2)
-- [🛠️ 前置要求](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#%EF%B8%8F-%E5%89%8D%E7%BD%AE%E8%A6%81%E6%B1%82)
-- [🤝 贡献与交流](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E8%B4%A1%E7%8C%AE%E4%B8%8E%E4%BA%A4%E6%B5%81)
-- [📄 许可证](https://tencent.yuanbao/chat?project_id=a2f1b83eb8ab413982d96f53f404d06c&project_name=%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B%E9%A1%B9%E7%9B%AE&HY82=2&HY56=SlidePage&conversation=ef19e1a0-5e7f-4304-b6b8-ca412bb0828b#-%E8%AE%B8%E5%8F%AF%E8%AF%81)
----
 
 ## ✨ 项目背景
 
 你是否也对大模型（LLM）感到好奇，想自己动手微调一个，却被复杂的教程和高昂的硬件要求劝退？
+或者你是相关领域的本科或研究生，学习了相关的理论知识却不知道怎么上手？
 
 市面上的教程往往存在三大痛点：
 
-- **⛰️ 设备要求高**：动辄需要多张A100/H800，让个人开发者望而却步。
+- **⛰️ 设备要求高**：动辄需要多张A100/H800，让学生或个人爱好者望而却步。
 - **📖 内容晦涩**：假设你已经精通深度学习，满篇都是复杂公式与理论。
-- **🔄 步骤复杂**：环境配置、代码调试困难重重，难以复现成功。
+- **🔄 步骤复杂**：环境配置（uv，docker）、代码调试困难重重，难以复现成功。
 
-本项目就是为了解决这些问题而生！我们相信，实践是最好的老师。本教程将带你用最清晰的路径，**在单张消费级显卡**（如RTX 3060 12GB, RTX 4090 等） 上，一步步完成：
+**本项目就是为了解决这些问题而生**！我们相信，实践是最好的老师。本教程将带你用最清晰的路径，在**单张消费级显卡**（如RTX 3060 12GB, RTX 4090 等）上，一步步完成：
 
-✅ 从 Hugging Face 下载热门开源模型 (如 Qwen2.5-1.5B-Instruct）
+✅ 从 Hugging Face 下载热门开源模型 (如 Qwen2.5-1.5B）
 ✅ 使用 **LoRA/QLoRA**​ 等高效技术进行微调
 ✅ 实现从**指令微调**到**人类偏好对齐**的完整流程
 ✅ 用 **vLLM**​ 加速，并将模型部署为 **API 服务**
 **理论够用即可，我们的核心是：动手，动手，再动手！**
 
 ---
+## 🛠️ 前置要求
 
+- **编程基础**：熟悉 Python 基础语法。
+- **知识基础**：基础的计算机相关知识，线性代数的知识，推荐学习了机器学习和自然语言处理。
+- **操作系统**：Linux或 Windows。
+- **硬件**：一台配备 **NVIDIA 显卡**​ 的电脑。
+    - **最低要求**：8GB 显存 (可微调 1B~3B 模型，或使用QLoRA微调 7B 模型)。
+    - **推荐配置**：12GB+ 显存 (可更流畅地微调 7B 模型，如 RTX 3060 12G, RTX 4060 Ti 16G 等)。
 
+> 无需任何深度学习或PyTorch经验！我们会从零开始讲解。
 
-
+---
 ## 🎯 教学目标
 
 完成本系列教程后，你将能够：
@@ -48,17 +47,14 @@
 
 ---
 
-
-
-
 ## 📚 课程大纲
 
 我们为你规划了一条清晰的学习路径，共 **7**​ 个核心模块：
 
 | 模块  | 标题                        | 主要内容                                          | 关键工具/库                            |
 | --- | ------------------------- | --------------------------------------------- | --------------------------------- |
-| 01  | 🛠️ **环境配置与模型初探**​        | 搭建Conda环境，安装PyTorch，从Hugging Face下载你的第一个开源模型。 | `conda`, `pip`, `huggingface-cli` |
-| 02  | 🤖 **模型推理初体验**​           | 学习使用 `transformers`库加载模型并进行文本生成，理解基础参数。       | `transformers`, `accelerate`      |
+| 01  | 🛠️ **环境配置**​             | 搭建Conda环境，安装PyTorch，从Hugging Face下载你的第一个开源模型。 | `conda`, `pip`, `huggingface-cli` |
+| 02  | 🤖 **基础知识与模型推理初体验**​      | 学习使用 `transformers`库加载模型并进行文本生成，理解基础参数。       | `transformers`，`Pytorch`          |
 | 03  | 🎨 **高效微调基石：LoRA与QLoRA**​ | 掌握参数高效微调的核心技术，用极低资源微调大模型。                     | `peft`, `bitsandbytes`, `trl`     |
 | 04  | 📖 **指令微调：监督微调**​         | 准备指令数据集，使用 SFT 训练脚本，让模型学会遵循指令。                | `datasets`, `trl`                 |
 | 05  | ❤️ **对齐模型偏好：直接偏好优化**​     | 使用 DPO 算法，基于人类偏好数据进一步优化模型输出。                  | `trl`, `dpo`                      |
@@ -67,51 +63,9 @@
 
 ---
 
-## 🛠️ 前置要求与目标人群
+## 🧭 使用指南
 
-- **编程基础**：熟悉 Python 基础语法。
-- **操作系统**：Linux 或 Windows (推荐)。
-- **硬件**：一台配备 **NVIDIA 显卡**​ 的电脑。
-    - **最低要求**：8GB 显存 (可微调 1B~3B 模型，或使用QLoRA微调 7B 模型)。
-    - **推荐配置**：12GB+ 显存 (可更流畅地微调 7B 模型，如 RTX 3060 12G, RTX 4060 Ti 16G 等)。
-
-- 
-
-> 无需任何深度学习或PyTorch经验！我们会从零开始讲解。
-
----
-
-## 🤝 贡献与交流
-
-我们非常欢迎和鼓励社区的贡献！
-- **📝 问题反馈**：如果你在实践过程中遇到任何问题，或有任何改进建议，欢迎提交 [Issue](https://github.com/your-username/llm-finetuning-tutorial/issues)。
-- **🔧 贡献代码**：如果你有更好的实现、修复了错误，或想增加新的内容，欢迎提交 Pull Request！
-- **💬 加入讨论**：你可以通过 [Discussions](https://github.com/your-username/llm-finetuning-tutorial/discussions)板块与其他学习者交流心得，互相答疑解惑。
-
-让我们共同构建一个对初学者最友好的大模型实践社区！
-
----
-
-## 📄 许可证
-
-本项目采用 [MIT License](https://tencent.yuanbao/LICENSE)开源协议。
-
----
 
 **如果这个教程对你有所帮助，请给项目点个 ⭐ Star 吧！这是对我们最大的鼓励！**
 
 > **迈出第一步总是最难的，但接下来的每一步都会让你更强大。现在，就打开 [模块一](https://tencent.yuanbao/01_environment/README.md)，开始你的大模型之旅吧！**
-
-
-
-## 🚀 快速开始
-
-1. **克隆本仓库**
-    ```
-    git clone https://github.com/your-username/llm-finetuning-tutorial.git
-    cd llm-finetuning-tutorial
-    ```
-2. **按照 [模块一：环境配置](tutorials/1_环境配置)的指引，安装 Conda 和 PyTorch。**
-3. **跟着教程，一个模块一个模块地动手操作吧！**
-
-> 每个模块都包含详细的步骤、可运行的代码和常见问题解答。
